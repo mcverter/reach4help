@@ -6,7 +6,7 @@ import TitleWithAddon from 'src/components/TitleWithAddon/TitleWithAddon';
 import styled from 'styled-components';
 
 import SearchIcon from '../../assets/search.svg';
-import { RequestInput } from './RequestReview';
+import { RequestInput } from '../NewRequest/RequestReview';
 
 const { Option } = Select;
 
@@ -16,7 +16,7 @@ export const REQUEST_TYPES = {
   Other: 'Other',
 };
 
-const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
+const Step2DescriptionTypeTags: React.FC<Step2DescriptionTypeTagsProps> = ({
   onSubmit,
   request,
   setStreetAddress,
@@ -51,11 +51,11 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
         rules={[
           {
             required: form.getFieldValue('type') === 'Other',
-            message: t('Step1ChooseLocation.form.other_error_message'),
+            message: t('Step2DescriptionTypeTags.form.other_error_message'),
           },
         ]}
       >
-        <Input placeholder={t('Step1ChooseLocation.form.other')} />
+        <Input placeholder={t('Step2DescriptionTypeTags.form.other')} />
       </Form.Item>
     );
   };
@@ -69,12 +69,12 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
     <MainDiv>
       <FormDiv>
         <TitleWithAddon level={3} left="0%" transform="none">
-          {t('Step1ChooseLocation.title')}
+          {t('Step2DescriptionTypeTags.title')}
         </TitleWithAddon>
 
         {/* There is a bug with types regarding onFinish - apparently an issue with @types and antd types
         https://github.com/ant-design/ant-design/pull/21067 - If it's not please fix *.* */}
-        <Step1ChooseLocationForm
+        <Step2DescriptionTypeTagsForm
           layout="vertical"
           form={form}
           onFinish={values => {
@@ -90,12 +90,12 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
             <Col span={21}>
               <FormItem
                 name="streetAddress"
-                label={t('Step1ChooseLocation.form.address')}
+                label={t('Step2DescriptionTypeTags.form.address')}
                 rules={[
                   {
                     required: true,
                     message: t(
-                      'Step1ChooseLocation.form.address_error_message',
+                      'Step2DescriptionTypeTags.form.address_error_message',
                     ),
                   },
                 ]}
@@ -123,13 +123,13 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
             rules={[
               {
                 required: true,
-                message: t('Step1ChooseLocation.form.type_error_message'),
+                message: t('Step2DescriptionTypeTags.form.type_error_message'),
               },
             ]}
           >
             <Row justify="space-between" align="middle">
               <LeftLabelColStyle lg={3} md={4} sm={6} xs={8}>
-                {t('Step1ChooseLocation.form.type')}
+                {t('Step2DescriptionTypeTags.form.type')}
               </LeftLabelColStyle>
               <Col md={10} sm={12} xs={14}>
                 <Select
@@ -150,16 +150,16 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
           {mayBeOtherField()}
           <FormItem
             name="body"
-            label={t('Step1ChooseLocation.form.body')}
+            label={t('Step2DescriptionTypeTags.form.body')}
             rules={[
               {
                 required: true,
-                message: t('Step1ChooseLocation.form.body_error_message'),
+                message: t('Step2DescriptionTypeTags.form.body_error_message'),
               },
             ]}
           >
             <Input.TextArea
-              placeholder={t('Step1ChooseLocation.form.body')}
+              placeholder={t('Step2DescriptionTypeTags.form.body')}
               maxLength={500}
             />
           </FormItem>
@@ -167,11 +167,11 @@ const Step1ChooseLocation: React.FC<Step1ChooseLocationProps> = ({
           <Row>
             <Col span={24}>
               <StepForwardButton htmlType="submit">
-                {t('Step1ChooseLocation.form.submit')}
+                {t('Step2DescriptionTypeTags.form.submit')}
               </StepForwardButton>
             </Col>
           </Row>
-        </Step1ChooseLocationForm>
+        </Step2DescriptionTypeTagsForm>
       </FormDiv>
     </MainDiv>
   );
@@ -197,7 +197,7 @@ const CharacterLimitDiv = styled.div`
   margin-bottom: 24px;
 `;
 
-const Step1ChooseLocationForm = styled(Form)`
+const Step2DescriptionTypeTagsForm = styled(Form)`
   width: 100%;
   margin-top: 16px;
   .ant-form-item-label {
@@ -225,7 +225,7 @@ const MapActionButton = styled(Button)`
   }
 `;
 
-interface Step1ChooseLocationProps {
+interface Step2DescriptionTypeTagsProps {
   onSubmit: Function;
   request: RequestInput;
   setStreetAddress: (string: string) => void;
@@ -233,4 +233,4 @@ interface Step1ChooseLocationProps {
   setMyLocation: () => void;
 }
 
-export default Step1ChooseLocation;
+export default Step2DescriptionTypeTags;
