@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import Modal from 'src/components/figma/Modal';
 import PhoneEntryContainer from 'src/modules/phone/containers/PhoneEntryContainer/PhoneEntryContainer';
 import PhoneVerifyContainer from 'src/modules/phone/containers/PhoneVerifyContainer/PhoneVerifyContainer';
 import { AppState } from 'src/store';
+
+import Modal from '../../components/figma/GenericFigmaModal';
 
 const PhoneNumberModal: React.FC = () => {
   const [showConfirmationPage, setShowConfirmationPage] = useState<boolean>(
@@ -51,7 +52,13 @@ const PhoneNumberModal: React.FC = () => {
   }, [phoneNumber, profile, newRequest, isVisible, newOffer]);
 
   return (
-    <Modal visible={isVisible} closable={false} footer={null} title={null}>
+    <Modal
+      visible={isVisible}
+      closable
+      footer={null}
+      title={null}
+      onCancel={() => setIsVisible(false)}
+    >
       {(showConfirmationPage && <PhoneVerifyContainer />) || (
         <PhoneEntryContainer />
       )}

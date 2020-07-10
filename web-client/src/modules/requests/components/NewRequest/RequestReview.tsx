@@ -1,7 +1,8 @@
 import { Col, Row } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StepBackButton, StepForwardButton } from 'src/components/Buttons';
+import PhoneNumberModal from 'src/pages/modals/phoneNumber';
 import styled from 'styled-components';
 
 import TitleWithAddon from '../../../../components/TitleWithAddon/TitleWithAddon';
@@ -13,6 +14,8 @@ const RequestReview: React.FC<RequestReviewProps> = ({
   goBack,
 }): React.ReactElement => {
   const { t } = useTranslation();
+  const [phoneModalVisible, setPhoneModalVisible] = useState<boolean>(true);
+
   return (
     <MainDiv>
       <TitleWithAddon alignAddon="left" level={3} left="0%" transform="none">
@@ -55,6 +58,7 @@ const RequestReview: React.FC<RequestReviewProps> = ({
           </StepForwardButton>
         </Col>
       </Row>
+      <PhoneNumberModal />
     </MainDiv>
   );
 };

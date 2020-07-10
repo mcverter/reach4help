@@ -18,6 +18,7 @@ interface GenericFigmaModalProps {
   visible: boolean;
   footer: any;
   closable: boolean;
+  onCancel?: (Event) => void;
   title: string | null;
 }
 
