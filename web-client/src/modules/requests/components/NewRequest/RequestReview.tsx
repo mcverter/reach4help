@@ -2,7 +2,7 @@ import { Col, Row } from 'antd';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StepBackButton, StepForwardButton } from 'src/components/Buttons';
-import PhoneNumberModal from 'src/pages/modals/phoneNumber';
+import PhoneNumberModal from 'src/pages/modals/PhoneNumberModal';
 import styled from 'styled-components';
 
 import TitleWithAddon from '../../../../components/TitleWithAddon/TitleWithAddon';

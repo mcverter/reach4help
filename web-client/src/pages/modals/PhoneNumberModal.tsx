@@ -4,7 +4,7 @@ import PhoneEntryContainer from 'src/modules/phone/containers/PhoneEntryContaine
 import PhoneVerifyContainer from 'src/modules/phone/containers/PhoneVerifyContainer/PhoneVerifyContainer';
 import { AppState } from 'src/store';
 
-import Modal from '../../components/figma/GenericFigmaModal';
+import GenericFigmaModal from '../../components/figma/GenericFigmaModal';
 
 const PhoneNumberModal: React.FC = () => {
   const [showConfirmationPage, setShowConfirmationPage] = useState<boolean>(
@@ -52,7 +52,7 @@ const PhoneNumberModal: React.FC = () => {
   }, [phoneNumber, profile, newRequest, isVisible, newOffer]);
 
   return (
-    <Modal
+    <GenericFigmaModal
       visible={isVisible}
       closable
       footer={null}
@@ -62,7 +62,7 @@ const PhoneNumberModal: React.FC = () => {
       {(showConfirmationPage && <PhoneVerifyContainer />) || (
         <PhoneEntryContainer />
       )}
-    </Modal>
+    </GenericFigmaModal>
   );
 };
 
