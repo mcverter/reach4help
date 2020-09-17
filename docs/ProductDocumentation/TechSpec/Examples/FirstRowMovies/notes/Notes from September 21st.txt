@@ -1,0 +1,44 @@
+Notes from September 21 Meeting
+ 
+Members and Roles
+            Mitchell         PM      mitchell.verter@gmail.com
+            Lovepreet        UI      lovey723@gmail.com
+            Shamrat          UI      shamratbasnet@gmail.com
+            Jorge            BK      codenameyau@gmail.com
+ 
+GROUP RESOURCES
+Google Groups https://groups.google.com/forum/m/?fromgroups#!forum/firstrowmovies
+ 
+           
+           
+Code Repository on BitBucket
+            firstrowmoviescsc
+ 
+ 
+Type of Project:  Movie Rating System
+ 
+Information about Movies
+            Title
+            Director
+            Date
+            Genre
+            Actors
+ 
+USER TYPES:  Guest (G) , Registered (R), Administrator (A)
+Login (G)
+Register(G)
+Logout (R)
+Search (G) (R)
+WatchTrailer (G) (R)
+RateMovie (R)
+WriteReview (R)
+Comment ( R )
+AddMovie (A)
+RemoveMovie (A)
+DeleteReview (A)
+DeleteComments (A)
+Logout ( R ) (A)
+ 
+REGISTERED USER ATTRIBUTES
+User name
+Email address

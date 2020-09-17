@@ -1,0 +1,73 @@
+// Manger Pseudocode by Jorge
+
+LoginManager
+// The system creates a new GuestUser object if not user is not logged in
+// 	if (!isset($_SESSION['logged_in']))
+//		$user_object = new GuestUser();
+// When user clicks submit on login form, the system gets the username and password from the form
+// 		$check_username = mysql_real_escape_string($_POST['username']);
+//		$check_password = mysql_real_escape_string($_POST['password']);
+// Access the GuestUser object's login method
+//		$user_object->login($check_username, $check_password);
+
+
+RegisterManager
+// The system creates a new GuestUser object if not user is not logged in
+// 	if (!isset($_SESSION['logged_in']))
+//		$user_object = new GuestUser();
+// User submits registration form and the systems gets the username and email of the form
+// 		$username = mysql_real_escape_string($_POST['username']);
+//		$email = mysql_real_escape_string($_POST['email']);
+// Calls the GuestUser object's register method 
+// 		$user_object->register($username, $email);
+
+
+ComplainManager
+// When the user submits a complaint, the system receives the complaint about the user and comment
+//		$comment_id = comment_object.getCommentID();
+// Access the user_object's complain method
+// 		$user_object->complain($comment_id);
+
+
+CommentManager
+// After the user submits comment, the system gets the user's id, movie id and comment
+// 		$user_id = user_object->getID();
+// 		$movie_id = movie_object->getMovieID();
+//		$comment_data = mysql_real_escape_string($_POST['comment']);
+// Calls the RegisteredUser's submit comment method
+//		$user_object->submitComment($user_id, $movie_id, $comment_data);
+
+
+WarnManager
+// System recieves data of complaints and creates an array of users to warn
+// System creates a string containing a warning message
+// Manager loops through each user in the array into the AdminUser's warn user method
+// 		$admin_object->warnUser($user_id, $comment_id, $complaint_id, $warning_msg);
+
+
+WatchMovieManager
+// The manager receives the movieID of the movie and the userID of the user
+// Calls the Movie object's play movie method
+// 		$movie_object->playMovie($user_id, $movie_id);
+
+
+AddToCartManager
+// The manager recieves the movie info of the movie the user has added to cart
+// 	if(isset($_POST['addtocart']))
+//	{
+//		$movie_id = $movie_object->getMovieID();
+//		$cart_object->addToCart($movie_id);
+//	}
+
+
+RemoveFromCartManager
+// The manager recieves an array if the movies the user wants to remove from their cart
+// The manager loops through the array and removes each movie from the user's cart
+// 	if(isset($_POST['removefromcart']))
+//	{
+//		foreach (remove_movies as $movie)
+//		{
+//			$movie_id = $movie->getMovieID();
+//			$cart_object->removeFromCart($movie_id);
+//		}
+//	}

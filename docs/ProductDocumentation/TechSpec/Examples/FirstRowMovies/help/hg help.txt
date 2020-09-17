@@ -1,0 +1,39 @@
+===========================
+How to use hg: command-line
+===========================
+
+-Create a repository:
+	< go to desired directory >
+	hg init
+
+
+-Clone a repository:
+	< change directory where you want to clone repository>
+	hg clone < bitbucket repository >
+
+
+-View logs of all commits in repository
+	hg log
+
+
+-Add file/folder to next commit:
+	< Drag and drop files into repository >
+	hg add < file/folder >
+
+
+-Commit update with message tag:
+	hg commit -m "< update message >"
+
+
+-Push next commit to online repository (bitbucket):
+	hg push < repository URL >
+	< enter password for bitbucket account >
+
+
+-Pulling updates from bitbucket repository:
+	hg pull < repository URL >
+	< enter password for bitbucket account >
+
+
+-Updating changes to local repository:
+	hg update	

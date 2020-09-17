@@ -1,0 +1,52 @@
+Checklist for the "Design Document" due next Friday, November 9th:
+
+    Finalize Classes and Database Relations (incomplete)
+    Split Up Tasks for Design Document
+        Update table of contents and introduction
+        Update the use-case diagram (revised)
+        Update changes for the collaboration diagrams (2/4 submitted)
+        Expand and correct the System State Diagram for all use-cases 
+        Expand the ER Class Diagram (6 classes thus far)
+        Correct and expand the ER Database Diagram
+        Write the Detailed Pseudo-Code (1/4 completed)
+        Draft the GUI documentation (not started)
+        Gather screenshots of the system UI prototype (not started)
+    Merge and Revise Design Document
+
+
+Checklist for the "Working Prototype", due Friday, November 16th or 23rd:
+
+    Design and Implement Classes (incomplete list)
+        User
+        GuestUser
+        CustomerUser
+        AdminUser
+        Movie
+        Cart
+    Design and Populate Database Tables (incomplete list)
+        Movies (designed and populated)
+        Ratings
+        User
+        Complaints
+        Purchases
+    Graphical User Interface
+        Design site template (completed)
+        Gather UI resources (images, video files, etc.)
+        Create file for each necessary user interface
+    Creative Feature
+        Brainstorm
+        Drink tea
+    Implementation
+        Revised and debug class methods
+        Setup mail server
+        Implement the UI functionality using the revised classes
+    Merge Files and Test Prototype
+        Create test accounts for debugging
+        Test implementation functionality as a whole
+        Review and demonstrate specifications checklist line by line
+    Maintenance
+        Fix our errors, revise our code
+        Add missing functionality to ensure that our project meet specifications
+
+
+

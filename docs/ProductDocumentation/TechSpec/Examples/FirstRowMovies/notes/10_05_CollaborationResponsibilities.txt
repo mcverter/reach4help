@@ -1,0 +1,20 @@
+L Login
+M Read 
+J Complain
+S Apply to be a User (Register?)
+
+M Rate
+J Comment
+S AssignID
+L Suspend
+
+M EraseComment
+J Warn
+S SuspendUser
+L DeleteUser
+
+M Logout
+J Watch Movie
+S Search
+L Checkout
+

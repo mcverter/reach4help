@@ -1,0 +1,22 @@
+To Do Next Week:
+
+1. REPOSITORY
+ a. Upload documents to repository
+ b. Download new documents from repository
+ c. Update all documents from repository
+
+2. TASK ANALYSIS
+ a. We all need to analyze (1).
+ b  Each person is given additional analyses:
+  Sam has (4) & (6)
+  Lovey has (10) and (11)
+  George has (12)
+  I will do (2) (3) (5) and (7)
+ c. Let's wait to do (8) until he discusses the algorithms in class.
+
+(3)  ANALYSIS REQUIREMENTS
+ (a) Title
+ (B) Classes and Methods 
+ (C) Diagrams
+ (E) Other
+

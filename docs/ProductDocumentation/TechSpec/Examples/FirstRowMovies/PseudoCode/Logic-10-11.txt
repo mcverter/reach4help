@@ -1,0 +1,27 @@
+System Requirement Logic 10, 11
+
+
+10. Users and visitors can complain to admins about users who wrote inappropraite comments:
+
+// User views comments of a movie page (movieinfo.php)
+// User clicks on the complain button located next to the comment
+// 	if (isset($_POST['complain']))
+	// located the commentID of the comment that user clicked on
+	// calls user object's complainComment($commentID) method
+// The admin goes to the complaints interface and sees a list of complaints
+// The admin checks off the complaint and clicks either the ignore or erase button
+// If the admin clicks the ignore button, 
+	// Call the admin object's ignoreComplaint() method
+// Else if the admin clicks the erase button,
+	// Call the admin object's removeComment() and warn() methods simultaneously
+// The complaint is removed from the complaints database afterwards
+
+
+
+11. Users who are suspected to be spammers twice or were warned twice will be removed from the system:
+
+// When a user logs in to a session, check both his spam and warn counters.
+// If either his spam or his warn counter is 2 or higher,
+	// The system will mark the session to terminate the account afterwards
+	// The user will be notified in the homepage after his login session begins
+	// When the user logs out, the system automatically deletes the user from the database
