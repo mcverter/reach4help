@@ -13,15 +13,19 @@ import { signOutCurrentUserAction } from 'src/ducks/auth/actions';
 import { observeOffers } from 'src/ducks/offers/actions';
 import { OffersState } from 'src/ducks/offers/types';
 import { ProfileState } from 'src/ducks/profile/types';
-import { RoleInfoLocation } from 'src/modules/personalData/pages/routes/RoleInfoRoute/constants';
+import { FindRequestsLocation } from 'src/modules/requests/pages/routes/FindRequestsRoute/constants';
 import { Module } from 'src/types/module';
 
 import { AuthState } from '../ducks/auth/types';
 import { updateUserProfile } from '../ducks/profile/actions';
-import { ApplicationPreference } from '../models/users';
+import { ApplicationPreference, User } from '../models/users';
 import modules from '../modules';
 import NotFoundRoute from './routes/NotFoundRoute';
 import ProtectedRoute from './routes/ProtectedRoute';
+
+const mockProfile = User.factory({
+  username: 'pleaseLogin',
+});
 
 const MasterPage = (): ReactElement => {
   const { t } = useTranslation();
@@ -120,7 +124,7 @@ const MasterPage = (): ReactElement => {
   };
 
   const renderLayout = (routeModule: Module) => {
-    if (routeModule.layout === 'dashboard' && userProfile) {
+    if (routeModule.layout === 'dashboard') {
       return (
         <>
           <Helmet>
@@ -132,8 +136,8 @@ const MasterPage = (): ReactElement => {
                 ? routeModule.dynamicMenuLinks(profileState)
                 : routeModule.menuItems
             }
-            offersState={offersState}
-            profileData={userProfile}
+            offersState={offersState || {}}
+            profileData={userProfile || mockProfile}
             isCav={userProfile?.applicationPreference === 'cav'}
             logoutHandler={() => dispatch(signOutCurrentUserAction())}
             toggleApplicationPreference={toggleApplicationPreference}
@@ -169,9 +173,9 @@ const MasterPage = (): ReactElement => {
       <Switch>
         {renderModules()}
         {/* TEMPORARY - Redirect to new request so that people don't see a 404 page */}
-        <ProtectedRoute
+        <Route
           path="/"
-          component={() => <Redirect to={RoleInfoLocation.path} />}
+          component={() => <Redirect to={FindRequestsLocation.path} />}
         />
         <Route path="*" component={NotFoundRoute} />
       </Switch>
