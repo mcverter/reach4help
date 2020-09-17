@@ -9,22 +9,22 @@
    1.2.2. Scope
    1.2.3. Acronyms and Abbreviations
    1.2.4. Summary
-2. [Use Case Diagram](USECASES-Use-Case-Diagram)
+2. [Use Case Diagram](usecases/USECASES-Use-Case-Diagram)
 
 ## Use Cases and Collaboration Diagrams / Figma Flow
 
-1. [Use Case Summaries](USECASES-Use-Case-Summaries)
+1. [Use Case Summaries](usecases/USECASES-Use-Case-Summaries)
 2. Base User // Common Functionality
 
-   1. [View Public Posts](View-Public-Posts)
-   2. [Search Public Posts](Search-Public-Posts)
+   1. [View Public Posts](usecases/View-Public-Posts)
+   2. [Search Public Posts](usecases/Search-Public-Posts)
 
 3. Unauthorized User
 
-   1. [Login](Login)
-   2. [Register](Register)
-   3. [View Private Requests WITHOUT Private Data](View-Request-No-Data)
-   4. [Search Private Requests WITHOUT Private Data](Search-Request-No-Data)
+   1. [Login](usecases/Login)
+   2. [Register](usecases/Register)
+   3. [View Private Requests WITHOUT Private Data](usecases/View-Request-No-Data)
+   4. [Search Private Requests WITHOUT Private Data](usecases/Search-Request-No-Data)
 
 4. Authorized User
    1. Requests (Was "Request")
@@ -58,24 +58,24 @@
 
 5)  User Models
 
-    1. [Base User Model](MODELS-Base-User-Model)
-    2. [Unauthorized User Model](MODELS-Unauthorized-User-Model)
-    3. [Authorized User Model](MODELS-Authorized-User-Model)
-    4. [Group User Model](MODELS-Group-User-Model)
-    5. [Admin User Model](MODELS-Admin-User-Model)
+    1. [Base User Model](models/MODELS-Base-User-Model)
+    2. [Unauthorized User Model](models/MODELS-Unauthorized-User-Model)
+    3. [Authorized User Model](models/MODELS-Authorized-User-Model)
+    4. [Group User Model](models/MODELS-Group-User-Model)
+    5. [Admin User Model](models/MODELS-Admin-User-Model)
 
 6)  Entity Models -- Models must be NOUNS "request" and "offer" are verbs as well as nouns
-    1. [Type Model](MODELS-Type-Model)
+    1. [Type Model](models/MODELS/MODELS-Type-Model)
     
-    2. [Post Model](MODELS-Post-Model)
-    3. [Response Model](MODELS-Response-Model)
+    2. [Post Model](models/MODELS-Post-Model)
+    3. [Response Model](models/MODELS-Response-Model)
     
-    4. [Offer Model](MODELS-Offer-Model) 
-    5. [Request Model](MODELS-Request-Model) 
+    4. [Offer Model](models/MODELS-Offer-Model) 
+    5. [Request Model](models/MODELS-Request-Model) 
     
-    6.  [Message Model](MODELS-Message-Model)
+    6.  [Message Model](models/MODELS-Message-Model)
     
-    7. [Timeline Model](MODELS-Timeline-Model)
+    7. [Timeline Model](models/MODELS-Timeline-Model)
 
 =========
 
