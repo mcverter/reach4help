@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Database Model 
+
+// Legend:
+// < and > indicate there are multiple of that entity
+// o indicates optional
+
+//    owner ---> pet:   every owner has one or more pets
+// .  pet <--- owner:   every owner has one or more pets
+// .  person o---> car: a person optionally owns one or more cars
+
+// Beneficiary (User) o---> Requests
+//                    ----> Programs Assignments <---o Program 
+// Volunteer (User)   o--> Requests (Assigned to Help)
+//                    ---> Programs Assignments <---o Program 
+// Program            ---> Pipeline Steps              
+//                    o--> Requests
+// Request            <--o Program
+//                    <--o Pipeline Step
+//                    <--o Beneficiary
+//                    <--o AssignedVolunteer
+//                    o--> Volunteer Responses <--o Volunteer
+
+model User {
+  UUID String @unique
+  address String
+  email String
+  phone String
+  isVolunteer Boolean
+  volunteerNotes String
+  isBenificiary Boolean
+  beneficiaryNotes String
+  newField String
+}
+
+model Program {
+  programUUID String @unique
+  name String
+  description String
+}
+
+model PipelineStep {
+  UUID String @unique
+  programUUID String @unique
+  sequence Int
+  name String
+  code String
+  description String
+}
+
+model Request {
+  UUID String @unique
+  beneficiaryUUID String @unique
+  volunteeerUUID String @unique
+  summary String
+  description String
+  programUUID String @unique
+  pipelineStatusUUID String @unique
+}
+
+model UserProgramAssignment {
+  UUID String @unique
+  isVolunteer String
+  isBeneficiary String
+  programUUID String @unique
+  userUUID String @unique
+}
+
+model responses {
+  UUID: String
+  volunterUUID: string
+  isWilling: String
+  responseText: String
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+

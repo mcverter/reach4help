@@ -10,7 +10,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](./CODE_OF_CONDUCT.md)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-44-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Who We Are
@@ -41,7 +41,13 @@ This is our mono-repo, containing all the sub-projects we're working on. If you 
 
 ## Preparing the repository
 
-We use `Yarn workspaces` to manage this repository, so all NPM packages, for all directories, can be installed using the following command in the root directory:
+We use `Yarn workspaces` to manage this repository, so all NPM packages, for all directories, can be installed using the following command in the root directory. First, install yarn globally:
+
+```
+npm install --global yarn
+```
+
+Then, install the packages in the root directory:
 
 ```
 yarn install
@@ -122,6 +128,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Danieleclima"><img src="https://avatars.githubusercontent.com/u/43587144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Danieleclima</b></sub></a><br /><a href="https://github.com/reach4help/reach4help/commits?author=Danieleclima" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/iamtimleonard"><img src="https://avatars.githubusercontent.com/u/69484330?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim Leonard</b></sub></a><br /><a href="#projectManagement-iamtimleonard" title="Project Management">📆</a> <a href="https://github.com/reach4help/reach4help/commits?author=iamtimleonard" title="Code">💻</a> <a href="https://github.com/reach4help/reach4help/pulls?q=is%3Apr+reviewed-by%3Aiamtimleonard" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
