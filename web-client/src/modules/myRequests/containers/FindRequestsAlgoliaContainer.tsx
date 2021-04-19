@@ -28,8 +28,8 @@ const PostInfoDisplay = ({ post }) => {
     ({ profile }: { profile: ProfileState }) => profile,
   );
   const [currentPost] = useState(post);
-  const { userSnapshot, description, title } = post;
-  const { displayName, displayPicture } = userSnapshot;
+  const { creatorSnapshot, description, title } = post;
+  const { displayName, displayPicture } = creatorSnapshot;
   const onClickHandler = () =>
     dispatch(observeCreateXSpecificOfferFromRequest(currentPost, profileState));
 
